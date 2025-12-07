@@ -100,3 +100,12 @@ Gender Distribution (Pie chart with percentages)
 GPA Distribution (Histogram)
 
 Monthly Admission Trends (Line chart)
+
+**Challenges Encountered ⚠️**
+- Challenge	Cause	Solution / Workaround
+- Missing Extracurricular_Activities values	Students with no participation	Replaced None with "Unselected"
+- Categorical inconsistencies	Variations like male, Male, MALE	Standardized values using .str.capitalize()
+- FutureWarning with inplace=True	Pandas 3.0 behavior change	Replaced with assignment: df[col] = df[col].replace(...)
+- AI integration issues	Hugging Face endpoint, token, or PyTorch missing	Used OpenAI GPT-4 API; Hugging Face requires correct router endpoint
+- Kernel caching	Excel edits didn’t update DataFrame	Restarted kernel and reran notebook
+- Visualization improvements	Needed data labels, larger figures, modern look	Adjusted Matplotlib and Seaborn parameters
